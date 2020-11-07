@@ -5,17 +5,17 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
+import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 
 @Module
 class RetrofitModule {
-    private val BASE_URL: String = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
+    private val BASE_URL: String = "https://mashape-community-urban-dictionary.p.rapidapi.com/"
 
     @Provides
     fun getHttpInterceptor(): HttpLoggingInterceptor {
@@ -34,12 +34,13 @@ class RetrofitModule {
         return  GsonConverterFactory.create(gson)
     }
     @Provides
-    fun getCallAdapterFactory () : RxJava2CallAdapterFactory{
-        return RxJava2CallAdapterFactory.create()
+    fun getCallAdapterFactory () : RxJava3CallAdapterFactory {
+        return RxJava3CallAdapterFactory.create()
     }
 
     @Provides
     fun getOkHttpClient(httpInterceptor: HttpLoggingInterceptor): OkHttpClient {
+
         val okHttpClientBuilder = OkHttpClient().newBuilder()
         okHttpClientBuilder.addInterceptor(httpInterceptor)
         return okHttpClientBuilder.build()
@@ -47,7 +48,7 @@ class RetrofitModule {
 
     @Singleton
     @Provides
-    fun getRetrofit(okHttpClient: OkHttpClient, factory: GsonConverterFactory, rxJava2CallAdapterFactory: RxJava2CallAdapterFactory): Retrofit {
+    fun getRetrofit(okHttpClient: OkHttpClient, factory: GsonConverterFactory, rxJava2CallAdapterFactory: RxJava3CallAdapterFactory): Retrofit {
         val retrofit: Retrofit.Builder = Retrofit.Builder()
         retrofit.baseUrl(BASE_URL)
         retrofit.addConverterFactory(factory)
