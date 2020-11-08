@@ -10,11 +10,10 @@ import com.example.test_jav_with_kotlin.models.Search
 
 
 class SearchResultAdapter : RecyclerView.Adapter<SearchResultAdapter.SearchHolder>() {
-    var mutableList: MutableList<Search> = mutableListOf()
+    private var mutableList: MutableList<Search> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val binding: SearchItemBinding = DataBindingUtil.inflate(inflater, R.layout.search_item, parent, false)
+        val binding: SearchItemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.search_item, parent, false)
         return SearchHolder(binding)
     }
 
@@ -33,7 +32,7 @@ class SearchResultAdapter : RecyclerView.Adapter<SearchResultAdapter.SearchHolde
     class SearchHolder(val binding: SearchItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(search: Search){
-            binding.tvDefinition.setText(search.definition)
+            binding.tvDefinition.text = search.definition
         }
     }
 }

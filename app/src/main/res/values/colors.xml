@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="text_color">#000000</color>
     <color name="colorPrimary">#0008EE</color>
     <color name="colorPrimaryDark">#0600B3</color>
     <color name="colorAccent">#03DAC5</color>
+    //
+    <color name="searchCardColor">#BDB7FFF8</color>
 </resources>

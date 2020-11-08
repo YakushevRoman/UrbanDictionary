@@ -7,7 +7,7 @@ android {
         dataBinding true
     }
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 30
         multiDexEnabled true
     }

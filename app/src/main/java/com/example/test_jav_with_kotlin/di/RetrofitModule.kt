@@ -1,4 +1,4 @@
-package com.example.test_jav_with_kotlin.app.di
+package com.example.test_jav_with_kotlin.di
 
 import com.example.test_jav_with_kotlin.retrofit.UrbanDictionaryServiceApi
 import com.google.gson.Gson
@@ -61,4 +61,5 @@ class RetrofitModule {
     fun getUrbanDictionaryAPi(retrofit: Retrofit): UrbanDictionaryServiceApi {
         return retrofit.create(UrbanDictionaryServiceApi::class.java)
     }
+
 }
