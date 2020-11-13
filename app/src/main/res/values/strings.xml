@@ -100,4 +100,8 @@
     </string>
     <string name="input_word">Input word</string>
     <string name="search">Search</string>
+    <string name="bottom_navigation_title_searh">Searh</string>
+    <string name="bottom_navigation_title_history">History</string>
+    <string name="bottom_navigation_title_settings">Settings</string>
+    <string name="bottom_navigation_title_about">About</string>
 </resources>

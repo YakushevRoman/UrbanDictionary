@@ -9,8 +9,10 @@ import dagger.Provides
 class ApplicationContextModule constructor(val app: Application){
 
     @Provides
-    fun getApplicationContext() : Context = app.applicationContext
+    fun getApplicationContext() : Context =
+            app.applicationContext
 
     @Provides
-    fun provideApplication () : Application = app
+    fun provideApplication () : Application =
+            app
 }

@@ -6,7 +6,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".app.fragments.SearchFragment">
+        tools:context=".app.fragments.SearchFragment"
+        android:background="@color/colorMainBackground">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilSearch"

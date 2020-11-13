@@ -29,8 +29,7 @@ class SearchResultAdapter : RecyclerView.Adapter<SearchResultAdapter.SearchHolde
         notifyDataSetChanged()
     }
 
-    class SearchHolder(val binding: SearchItemBinding) : RecyclerView.ViewHolder(binding.root){
-
+    class SearchHolder(private val binding: SearchItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(search: Search){
             binding.tvDefinition.text = search.definition
         }

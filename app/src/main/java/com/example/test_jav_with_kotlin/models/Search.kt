@@ -10,7 +10,7 @@ data class Search(
         val definition: String,
         val permalink: String,
         val thumbs_up: Int,
-        /*val sound_urls: List<String>,*/
+        val sound_urls: List<String>,
         val author: String,
         val word: String,
         val defid: Int,

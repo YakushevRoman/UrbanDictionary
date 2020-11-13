@@ -24,7 +24,7 @@ class SearchViewModel : ViewModel() {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    _searchList.value = it.list
+                    _searchList.value = it.searchResults
                 },{
                     it.printStackTrace()
                 })

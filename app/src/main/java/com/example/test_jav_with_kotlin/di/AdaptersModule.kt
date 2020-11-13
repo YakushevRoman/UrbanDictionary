@@ -9,5 +9,6 @@ import javax.inject.Singleton
 class AdaptersModule {
     @Singleton
     @Provides
-    fun getSearchAdapter() : SearchResultAdapter = SearchResultAdapter()
+    fun getSearchAdapter() : SearchResultAdapter =
+            SearchResultAdapter()
 }

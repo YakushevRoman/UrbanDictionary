@@ -11,8 +11,6 @@ class UrbanApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Log.d("TAG", "onCreateView:1 ")
-
         initDaggerComponent()
     }
 

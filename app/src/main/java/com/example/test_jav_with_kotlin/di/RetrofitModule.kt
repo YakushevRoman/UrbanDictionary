@@ -1,5 +1,6 @@
 package com.example.test_jav_with_kotlin.di
 
+import com.example.test_jav_with_kotlin.retrofit.RetrofitSettings
 import com.example.test_jav_with_kotlin.retrofit.UrbanDictionaryServiceApi
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -15,7 +16,6 @@ import javax.inject.Singleton
 
 @Module
 class RetrofitModule {
-    private val BASE_URL: String = "https://mashape-community-urban-dictionary.p.rapidapi.com/"
 
     @Provides
     fun getHttpInterceptor(): HttpLoggingInterceptor {
@@ -25,22 +25,20 @@ class RetrofitModule {
     }
 
     @Provides
-    fun getGson(): Gson {
-        return GsonBuilder().create()
-    }
+    fun getGson(): Gson =
+            GsonBuilder().create()
+
 
     @Provides
-    fun getConverterFactory(gson : Gson) : GsonConverterFactory{
-        return  GsonConverterFactory.create(gson)
-    }
+    fun getConverterFactory(gson : Gson) : GsonConverterFactory =
+            GsonConverterFactory.create(gson)
+
     @Provides
-    fun getCallAdapterFactory () : RxJava3CallAdapterFactory {
-        return RxJava3CallAdapterFactory.create()
-    }
+    fun getCallAdapterFactory () : RxJava3CallAdapterFactory =
+            RxJava3CallAdapterFactory.create()
 
     @Provides
     fun getOkHttpClient(httpInterceptor: HttpLoggingInterceptor): OkHttpClient {
-
         val okHttpClientBuilder = OkHttpClient().newBuilder()
         okHttpClientBuilder.addInterceptor(httpInterceptor)
         return okHttpClientBuilder.build()
@@ -50,7 +48,7 @@ class RetrofitModule {
     @Provides
     fun getRetrofit(okHttpClient: OkHttpClient, factory: GsonConverterFactory, rxJava2CallAdapterFactory: RxJava3CallAdapterFactory): Retrofit {
         val retrofit: Retrofit.Builder = Retrofit.Builder()
-        retrofit.baseUrl(BASE_URL)
+        retrofit.baseUrl(RetrofitSettings.baseUrl)
         retrofit.addConverterFactory(factory)
         retrofit.addCallAdapterFactory(rxJava2CallAdapterFactory)
         retrofit.client(okHttpClient)
@@ -58,8 +56,7 @@ class RetrofitModule {
     }
 
     @Provides
-    fun getUrbanDictionaryAPi(retrofit: Retrofit): UrbanDictionaryServiceApi {
-        return retrofit.create(UrbanDictionaryServiceApi::class.java)
-    }
+    fun getUrbanDictionaryAPi(retrofit: Retrofit): UrbanDictionaryServiceApi =
+            retrofit.create(UrbanDictionaryServiceApi::class.java)
 
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/itemAbout"
+        android:title="@string/bottom_navigation_title_about"
+        android:icon="@drawable/ic_baseline_info_24"/>
+
+    <item android:id="@+id/itemSettings"
+        android:title="@string/bottom_navigation_title_settings"
+        android:icon="@drawable/ic_baseline_app_settings_alt_24"/>
+
+    <item android:id="@+id/itemHistory"
+        android:title="@string/bottom_navigation_title_history"
+        android:icon="@drawable/ic_baseline_history_24"/>
+
+    <item android:id="@+id/itemSearch"
+        android:title="@string/bottom_navigation_title_searh"
+        android:icon="@drawable/ic_baseline_search_24"/>
+
+</menu>
