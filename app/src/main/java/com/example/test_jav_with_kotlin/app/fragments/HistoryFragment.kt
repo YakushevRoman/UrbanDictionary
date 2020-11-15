@@ -17,8 +17,7 @@ class HistoryFragment : Fragment() {
 
     private lateinit var viewModel: HistoryViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.history_fragment, container, false)
     }
 

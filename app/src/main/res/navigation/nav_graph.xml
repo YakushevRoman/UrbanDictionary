@@ -5,11 +5,24 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/searchFragment">
 
-    <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.example.test_jav_with_kotlin.app.fragments.SearchFragment"
-        android:label="search_fragment"
-        tools:layout="@layout/search_fragment">
-    </fragment>
+        <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.example.test_jav_with_kotlin.app.fragments.SearchFragment"
+            android:label="search_fragment"
+            tools:layout="@layout/search_fragment"/>
+        <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.example.test_jav_with_kotlin.app.fragments.SettingsFragment"
+            android:label="settings_fragment"
+            tools:layout="@layout/settings_fragment" />
+        <fragment
+            android:id="@+id/historyFragment"
+            android:name="com.example.test_jav_with_kotlin.app.fragments.HistoryFragment"
+            android:label="history_fragment"
+            tools:layout="@layout/history_fragment" />
+        <fragment
+            android:id="@+id/aboutFragment"
+            android:name="com.example.test_jav_with_kotlin.app.fragments.HelpFragment"
+            android:label="aboutFragment" />
 
 </navigation>

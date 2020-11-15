@@ -5,6 +5,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@color/colorMainLight</item>
         <item name="android:background">@color/colorMainBackground</item>
+        <item name="editTextColor">@color/colorMainLight</item>
         <item name="android:textSize">16sp</item>
     </style>
 </resources>

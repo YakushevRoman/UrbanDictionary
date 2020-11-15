@@ -16,10 +16,6 @@ class HelpFragment : Fragment() {
     private lateinit var binding: HelpFragmentBinding
     private lateinit var viewModel: HelpViewModel
 
-    companion object {
-        fun newInstance() = HelpFragment()
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.help_fragment, container, false)
         return binding.root
@@ -36,6 +32,6 @@ class HelpFragment : Fragment() {
     }
 
     private fun initViews(){
-        binding.tvInformation.text  = viewModel.helpInformationText.value
+        binding.tvInformation.text  = viewModel.initHelpViewModelParameters().value
     }
 }

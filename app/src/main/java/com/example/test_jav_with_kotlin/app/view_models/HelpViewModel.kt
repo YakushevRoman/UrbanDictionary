@@ -7,15 +7,14 @@ import androidx.lifecycle.ViewModel
 
 class HelpViewModel : ViewModel() {
 
-    init {
-        initHelpViewModelParameters()
-    }
-
     private var _helpInformationText: MutableLiveData<String> = MutableLiveData()
-    val helpInformationText : LiveData<String> = _helpInformationText
 
-    private fun initHelpViewModelParameters(){
-        _helpInformationText.value = "This is the app for searching information about definition of words"
+    fun initHelpViewModelParameters() : LiveData<String>{
+        val helpInformationText : LiveData<String> = _helpInformationText
+        _helpInformationText.value = "This is the app for searching information about definition of words \nwebsite https://www.urbandictionary.com"
+        return helpInformationText
     }
+
+
 
 }

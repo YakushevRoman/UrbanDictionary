@@ -19,7 +19,8 @@
                 android:id="@+id/tvDefinition"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/colorMainBackground"
+                android:background="@color/transcendent"
+                android:textColor="@color/colorSecondBackGround"
                 tools:text="Definition"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_menu"
-        app:backgroundTint="@color/colorSecondBackGround"
         app:itemRippleColor="@color/cardview_light_background"
         app:itemTextColor="@color/colorMainLight"
         app:labelVisibilityMode="labeled"
