@@ -49,6 +49,9 @@ class SearchFragment : Fragment() {
     }
 
     private fun initView() {
+        listItemBinding.rvSeachResul.adapter = searchResultAdapter
+        listItemBinding.rvSeachResul.layoutManager = LinearLayoutManager(context)
+
         listItemBinding.btnSearch.setOnClickListener {
             viewModel.getSearchList(listItemBinding.etSearch.text.toString())
         }
@@ -57,12 +60,15 @@ class SearchFragment : Fragment() {
 
         viewModel.lastWord.observe(viewLifecycleOwner, listItemBinding.etSearch::setText)
 
-        listItemBinding.rvSeachResul.adapter = searchResultAdapter
-        listItemBinding.rvSeachResul.layoutManager = LinearLayoutManager(context)
 
-        viewModel.listSearchData.observe(viewLifecycleOwner, Observer {
-            Log.d("TAG", "initView: " + it.size)
-        })
+
+//        viewModel.listSearchData.observe(viewLifecycleOwner, Observer {
+//            /*it.stream().forEach {
+//                it.list.forEach({
+//                    Log.d("TAG", "initView: ${it.definition}")
+//                })
+//            }*/
+//        })
     }
 
 }

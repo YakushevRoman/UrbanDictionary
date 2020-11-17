@@ -16,18 +16,19 @@ class SearchViewModel : ViewModel() {
     private lateinit var urbanDictionaryServiceApi: UrbanDictionaryServiceApi
     private lateinit var searchDao: SearchDao
 
-
     private val _searchList = MutableLiveData<List<Search>>()
     val searchList: LiveData<List<Search>> = _searchList
+
     private var _lastWord: MutableLiveData<String> = MutableLiveData<String>()
     var lastWord: LiveData<String> = _lastWord
-    lateinit var listSearchData: LiveData<List<SearchList>>
+
+    //lateinit var listSearchData: LiveData<List<SearchList>>
 
 
     fun setApi (urbanDictionaryServiceApi: UrbanDictionaryServiceApi, searchDao: SearchDao){
         this.searchDao = searchDao
         this.urbanDictionaryServiceApi = urbanDictionaryServiceApi
-        listSearchData = searchDao.getAllResultSearch()
+        //listSearchData = searchDao.getAllResultSearch()
     }
 
     fun getSearchList (searchWord : String){

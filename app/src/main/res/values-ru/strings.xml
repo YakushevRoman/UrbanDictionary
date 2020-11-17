@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_header_help_fragment">О приложении</string>
+    <string name="text_urban_web_site">https://www.urbandictionary.com</string>
+    <string name="text_year_created">\@2020</string>
+    <string name="text_urban_dictionary_infarmation">Каждый день обычные люди добавляют тысячи определений, что делает его живым культурным документом. С 1999 года наше сообщество написало более 12 миллионов определений. Urban Dictionary стал источником смеха и незаменимым справочником, созданным людьми и для людей.
+</string>
+</resources>

@@ -6,17 +6,55 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorMainBackground"
         android:padding="10dp"
         tools:context=".app.fragments.HelpFragment">
 
-        <TextView
-            android:id="@+id/tvInformation"
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextHeaderStyle"
+            android:id="@+id/tvHeader"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="@string/text_header_help_fragment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextCommonHighlightStyle"
+            android:id="@+id/tvUrbanDictionaryWebSite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_urban_web_site"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeader"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextCommonStyle"
+            android:id="@+id/tvInformation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_urban_dictionary_infarmation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUrbanDictionaryWebSite"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAppVersion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvYearCreated"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvYearCreated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_year_created"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -6,8 +6,18 @@
     <color name="colorAccent">#03DAC5</color>
     //
     <color name="searchCardColor">#BDB7FFF8</color>
-    <color name="colorSecondBackGround">#455A64</color>
-    <color name="colorMainBackground">#222222</color>
+    <color name="colorSecondBackGround">#7084b5</color>
+    <color name="colorMainBackground">#37474f</color>
     <color name="colorMainLight">#CFD8DC</color>
     <color name="transcendent">#00FFFFFF</color>
+    <!--DARK-->
+    <color name="primaryColor">#37474f</color>
+    <color name="primaryDarkColor">#102027</color>
+    <color name="secondaryColor">#7084b5</color>
+    <color name="secondaryDarkColor">#415885</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <!--RED-->
+    <color name="primaryColorRed">#dd2c00</color>
+    <color name="primaryLightColorRed">#ff6434</color>
+    <color name="primaryDarkColorRed">#a30000</color>
 </resources>

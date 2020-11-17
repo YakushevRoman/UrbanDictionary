@@ -23,7 +23,7 @@ class SearchResultAdapter : RecyclerView.Adapter<SearchResultAdapter.SearchHolde
 
     override fun getItemCount(): Int = mutableList.size
 
-    fun setSearchData  (searchList : List<Search>){
+    fun  setSearchData  (searchList : List<Search>){
         mutableList.clear()
         mutableList.addAll(searchList)
         notifyDataSetChanged()
