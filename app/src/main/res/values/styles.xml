@@ -1,12 +1,14 @@
 <resources>
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/primaryDarkColor</item>
+        <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColor">@color/colorMainLight</item>
-        <item name="android:background">@color/primaryColor</item>
         <item name="editTextColor">@color/colorMainLight</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="LayoutStyle">
+        <item name="android:background">@color/primaryColor</item>
     </style>
 
     <style name="TextHeaderStyle">

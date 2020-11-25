@@ -15,14 +15,25 @@
             android:name="com.example.test_jav_with_kotlin.app.fragments.SettingsFragment"
             android:label="settings_fragment"
             tools:layout="@layout/settings_fragment" />
+
         <fragment
             android:id="@+id/historyFragment"
-            android:name="com.example.test_jav_with_kotlin.app.fragments.HistoryFragment"
+            android:name="com.example.test_jav_with_kotlin.app.fragments.history_fragment.HistoryFragment"
             android:label="history_fragment"
-            tools:layout="@layout/history_fragment" />
+            tools:layout="@layout/history_fragment" >
+                <action
+                    android:id="@+id/action_historyFragment_to_histotySearchDetails"
+                    app:destination="@id/histotySearchDetails" />
+        </fragment>
+
         <fragment
             android:id="@+id/aboutFragment"
             android:name="com.example.test_jav_with_kotlin.app.fragments.HelpFragment"
             android:label="aboutFragment" />
+        <fragment
+            android:id="@+id/histotySearchDetails"
+            android:name="com.example.test_jav_with_kotlin.app.fragments.history_fragment.HistotySearchDetails"
+            android:label="histoty_search_details_fragment"
+            tools:layout="@layout/histoty_search_details_fragment" />
 
 </navigation>
